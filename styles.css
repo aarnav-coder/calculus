@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.titlebar {
+    margin: 3rem;
+    pad: 2rem;
+    text-align: center;
+}
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.sample-col {
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+.sample-col img {
+    width:  100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+.definition {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.formulas {
+    text-align: center;
+    margin: 6rem auto;
+}
+
+#content > .formulas > .row h3{
+    text-align: center;
+}
+
+.problem-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas: 
+    "p1 p2 p3";
+    
+}
+.problem-1 {
+    padding: 50px;
+    text-align: center;
+}
+.problem-1 img {
+    width:  90%;
+    height: 50%;
+    grid-area: p1;
+    border-radius: 10px;
+}
+
+.footer {
+    text-align: center;
+    background-color: #D7D7D7;
+    padding: 2rem;
+    margin-top: 20px;
+}
+.problem-2 {
+    padding: 50px;
+    text-align: center;
+}
+.problem-3 {
+    padding: 50px;
+    text-align: center;
+}
+.problem-3 img {
+    width:  90%;
+    height: 50%;
+    grid-area: p3;
+    border-radius: 10px;
+}

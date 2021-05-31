@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Arc Length</title>
+</head>
+<body>
+    <section id="header">
+        <div class="titlebar">
+            <h1>Arc Length Problems and polar curve (Integration)</h1>
+            <p><i>Made by Aarnav Balakrishnan</i></p>
+            <p>Indian Institute of Technology - Kapnur</p>
+        </div>
+    </section>
+    <section id="content">
+        <div class="definition">
+            <div class="row">
+                <div class="sample-col">
+                    <img src="arclength.jpg" alt="arclength-img">
+                    <p><strong>Arc Length - </strong>The distance along the arc (part of the circumference of a circle, or of any curve).</p>
+                </div>
+                <div class="sample-col">
+                    <img src="polarcurve.png" alt="polarcurve-img">
+                    <p><strong>Polar Curve - </strong>
+                        is a shape constructed using the polar coordinate system. Polar curves are defined by points that are a variable distance from the origin (the pole) depending on the angle measured off the positive xx-axis. Polar curves can describe familiar 
+                        Cartesian shapes such as ellipses as well as some unfamiliar shapes such as cardioids and lemniscates.
+                    </p>
+                </div>
+            </div>  
+        </div>
+        <div class="formulas">
+            <h2><u>Useful formulas to know:</u></h2>
+            <div class="row">
+                <div class="sample-col">
+                    <h3>Arc Length</h3>
+                    <img src="arclength-formula.png" alt="arclength-formula">    
+                </div>
+                <div class="sample-col">
+                    <h3>Polar Curve length</h3>
+                    <img src="polarcurve-formula.jpg" alt="arclength-formula">
+                </div>
+                <div class="sample-col">
+                    <h3>Polar Curve Area</h3>
+                    <img src="polarcurvearea-formula.png" alt="arclength-formula">
+                </div>
+            </div>   
+        </div>         
+    </section>
+    <section class="problems">
+        <div class="problem-grid">
+           <div class="problem-1">
+               <h3>Problem 1: Area Under a Polar Curve</h3>
+               <p>Find the area under the polar curve 2 - cos(θ); 0 ≤ θ ≤ 2π</p>
+               <img src="problem1.JPG" alt="">
+               <p><span class="math display">\[= \frac{1}{2}\int_{0}^{2\pi}(2-\cos \theta )^2 d\theta\\
+                \\
+                = \frac{1}{2}\int (2-\cos \theta )^2 d\theta\\
+                \\
+                = \frac{1}{2}\int [4-4\cos\theta + \cos^{2}\theta]d\theta\\
+                \\
+                = \frac{1}{2}(4)\int d\theta - \frac{1}{2}(4)\int \cos\theta d\theta + \int \cos^{2}\theta d\theta\\
+                \\
+                = 2\theta - 2\sin\theta + \frac{1}{2} \int (1 + \cos2\theta)d\theta\\
+                \\
+                = 2\theta - 2\sin\theta + \frac{1}{2} \int d\theta + \frac{1}{2} \int \cos2\theta d\theta\\
+                \\
+                = 2\theta - 2\sin\theta + \frac{\theta}{2} + \frac{1}{4} \sin 2\theta\\
+                \\
+                = \frac{5}{2}\theta - 2\sin\theta + \frac{1}{4} \sin 2\theta |_{0}^{2\pi}\\
+                \\
+                = 5\pi - 0 = 5\pi\]</span></p>
+            </div>
+            <div class="problem-2">
+                <h3>Problem 2: Arc Length</h3>
+                <p><span class="math display">\[f(x) = 2x^\frac{3}{2}\]</span> Calculate the arc length of the graph of  f(x)  over the interval  [0,1] . Round the answer to three decimal places.</p>
+                <p><span class="math display">\[f&#39;(x) = 3x^\frac{1}{2} \\
+                    \\
+                    (f&#39;(x))^2 = 9x \\
+                    \\
+                    Arc\:Length = \int_0^{1}\sqrt{1+9x}\:dx\\
+                    \\
+                    Perform\:u-substitution: u = 1+9x\:;\:du = 9dx\]</span></p>
+                <p>Change the limits of integration. When x = 0, u = 1. When x = 1, u = 10</p>
+                <p><span class="math display">\[=\frac{1}{9}\int_{1}^{10}\sqrt{u}\:du\\
+                    \\
+                    =\frac{1}{9}\cdot \frac{2}{3}u^\frac{3}{2}\:|_{1}^{10}\\
+                    \\
+                    =\frac{2}{27}[10\sqrt{10}-1] \approx 2.268\:\text{units}\]</span></p>
+            </div>
+            <div class="problem-3">
+                <h3>Polar Curve Length</h3>
+                <p>Find the arc length of the cardioid</p>
+                <p><span class="math display">\[r = 2 + 2\cos\theta\]</span></p>
+                <p>As theta goes from 0 to 2pi, the cardioid is traced out exactly once</p>
+                <p><span class="math display">\[\alpha = 0\:and\:\beta=2\pi\]</span></p>
+                <p><span class="math display">\[L = \int_{0}^{2\pi} \sqrt{[2+2\cos\theta]^2 + [-2\sin\theta]^2}\:d\theta\\
+                    \\
+                    = \int_{0}^{2\pi} \sqrt{4 + 8\cos\theta + 4\cos^2\theta + 4\sin^2\theta}\:d\theta\\
+                    \\
+                    = \int_{0}^{2\pi} \sqrt{4 + 8\cos\theta + 4(cos^2\theta + sin^2\theta)}\:d\theta\\
+                    \\
+                    remember: cos^2\theta + sin^2\theta = 1\\
+                    \\
+                    = \int_{0}^{2\pi} \sqrt{8 + 8\cos\theta}\: d\theta\\
+                    \\
+                    = 2 \int_{0}^{2\pi} \sqrt{2 + 2\cos\theta}\: d\theta\\\]</span></p>
+                <p>Using trig identities to manipulate the equation</p>
+                <p><span class="math display">\[2 cos(2\alpha) = 2\cos^2\alpha-1\\
+                    \\
+                    =cos(2\alpha) + 1 = 2cos^2\alpha\\
+                    \\
+                    =2cos(2\alpha) + 2 = 4cos^2\alpha\\
+                    \\
+                    let\:\alpha = \frac{\theta}{2}\\
+                    \\
+                    2 + 2\cos(\theta) = 4cos^2(\frac{\theta}{2})\\
+                    \\
+                    L = 2 \int_{0}^{2\pi} \sqrt{4cos^2(\frac{\theta}{2})}\\
+                    \\
+                    = 4 \int_{0}^{2\pi} |\cos\frac{\theta}{2}|\: d\theta\\
+                    \\\]</span></p>
+                <p>Change the limits from 0 to pi and double the answer because the cosine is negative for some value in its domain</p>
+                <p><span class="math display">\[= 8 \int_{0}^{\pi} cos(\frac{\theta}{2})\\
+                    \\
+                    = 8(2\sin(\frac{\theta}{2}))|_{0}^{\pi} = 16\]</span></p>    
+            </div>
+        </div>
+    </section>
+    <section id="footer">
+        <div class="footer">
+            <p>A Simple Project made by Aarnav Balakrishnan</p>
+            <a href = "aarnav.b.coder@gmail.com?subject = Feedback&body = Message">
+                aarnav.b.coder@gmail.com
+                </a>
+        </div>
+    </section>
+</body>
+</html>
